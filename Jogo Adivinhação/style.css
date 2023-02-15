@@ -1,0 +1,314 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* --corA: #ff4f8b; 
+     --corB: #fffd87;
+    --corC: #00d2ff;
+    --corFundo: rgb(243, 118, 243); */
+
+    /* --corA: #f380a7e0;
+    --corB: #fffd87;
+    --corC: #ff8800; 
+     --corFundo: rgb(12, 8, 25); */
+    
+    /* --corA: #22079ce0;
+    --corB: #5055eb;
+    --corC: #04587f; */
+
+    /* --corA: #054043; 
+    --corB: #34748e;
+    --corC: #bdd1d3;
+    --corFundo: #030a24ad;  */
+
+    --blurFundo: 100px;
+
+    --corA: rgb(8, 8, 8);
+    --corB: rgb(240, 189, 6);
+    --corC: rgba(242, 255, 0, 0.305);
+    --corFundo: #ff173ead;
+
+    --apagaBloco = none;
+
+
+    --corN: #dff1ff;
+
+   --brilho:rgba(255,255,255,0.5);
+   --fundoVidro: rgba(255,255,255,0.1);
+   --bordaTL:10px solid rgba(255,255,255,0.4);
+
+   --blurVidro: 3px;
+
+   --alturaDoVidro: 80px;
+   --alturaIcone: -80vh;
+
+}
+
+
+
+
+/* AQUI COMECA O FOOTER E O FUNDO */
+.corpoDaPagina{
+    overflow-x:hidden;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./fundo5.jpg);
+     
+    background-color: var(--corFundo);
+    
+     background-repeat: no-repeat;
+      right: 0; 
+      bottom: 0;
+      width: 100%; 
+      height: 100%; 
+      z-index: -1000;
+      background-size: cover; 
+    
+    
+    
+}
+/* .fundo{
+            position: fixed; 
+			right: 0; 
+			bottom: 0;
+			min-width: 100%; 
+			min-height: 100%;
+			width: auto; 
+			height: auto; 
+			z-index: -1000;
+			background: url(images/torre.jpg) no-repeat;
+			background-size: cover; } */
+
+
+
+.meusBotoesDeContato{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    overflow-x:hidden;
+
+}
+
+
+.javaScript{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    
+    height: 80%;
+    width: 90%;
+    z-index: 10;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-right: 1px solid rgba(255,255,255,0.2) ;
+    border-bottom: 1px solid rgba(255,255,255,0.2) ;
+    border-radius: 10px;
+    background: var(--fundoVidro);
+    backdrop-filter: blur(var(--blurVidro));
+    z-index: 1;
+    box-shadow: 0 5px 45px rgba(0,0, 0, 0.1);
+    text-decoration: none;
+    margin: 10px auto auto auto;
+    color: rgba(255,255,255,0.6);
+    padding: .5em;
+    font-size: 1em;
+    overflow-x:hidden;
+    
+
+}
+
+.containerGlass{
+
+    overflow-x:hidden;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to botton, var(--corA),var(--corN) );
+}
+
+.containerGlass::before{
+
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: var(--alturaDoVidro);
+    bottom: 0;
+    z-index:10;
+    border-top: 1px solid var(--brilho);
+    background: var(--fundoVidro);
+    backdrop-filter: blur(8px);
+}
+
+.containerGlass .color{
+    position: absolute;
+    filter: blur(var(--blurFundo));
+}
+.containerGlass .color:nth-child(1){
+    display: none;
+    top:0;
+    background: var(--corA);
+    width: 100%;
+    height: 40%;
+}
+
+.containerGlass .color:nth-child(2){
+    display: none;
+    bottom: -150px;
+    left: 10%;
+    background: var(--corB);
+    width: 90%;
+    height: 55%;
+}
+.containerGlass .color:nth-child(3){
+    display:none;
+    bottom: -50px;
+    right: 0;
+    background: var(--corC);
+    width: 60%;
+    height: 35%;
+}
+
+.containerGlass__lista{
+   position: relative;
+    display: flex;
+    margin-bottom: var(--alturaIcone);
+}
+
+.containerGlass__lista .containerGlass__lista__item{
+    position: relative;
+    list-style: none;
+    margin: 10px;
+
+}
+
+.containerGlass__lista .containerGlass__lista__item .containerGlass__lista__item__link{
+    position: relative;
+    top: 0;
+    width: 80px ;
+    height: 80px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding-left:.8em;
+    color: #fff;
+    font-size: 2em;
+
+    /* Borda de Vidro */
+    border: 1px solid rgba(255,255,255,0.4);
+    border-right: 1px solid rgba(255,255,255,0.2) ;
+    border-bottom: 1px solid rgba(255,255,255,0.2) ;
+    border-radius: 10px;
+    background: var(--fundoVidro);
+    backdrop-filter: blur(4px);
+    z-index: 1;
+    box-shadow: 0 5px 45px rgba(0,0, 0, 0.1);
+    text-decoration: none;
+    overflow: hidden;
+   /* Fim da Borda de Vidro */
+
+    transition: top 0.5s, z-index 0.5s, transform 0.5s;
+    transition-delay: 0.5s, 0.5s, 0s;
+}
+
+.containerGlass__lista .containerGlass__lista__item .containerGlass__lista__item__link:hover{
+    transition-delay: 0s, 0.5s, 0.5s;
+    top: -50px;
+    transform: translateY(50px);
+    z-index: 11;
+
+}
+
+.containerGlass__lista .containerGlass__lista__item .containerGlass__lista__item__link:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background: var(--brilho);
+    transform: skewX(45deg) translateX(150px);
+    transition: 0.5s;
+
+
+}
+.containerGlass__lista .containerGlass__lista__item .containerGlass__lista__item__link:hover:before{
+    transform: skewX(45deg) translateX(-150px);
+
+}
+
+.cabecalho{
+    border: 1px solid rgba(255,255,255,0.4);
+    border-right: 1px solid rgba(255,255,255,0.2) ;
+    border-bottom: 1px solid rgba(255,255,255,0.2) ;
+    border-radius: 0  0 5px  5px;
+    background: var(--fundoVidro);
+    backdrop-filter: blur(4px);
+    
+    box-shadow: 0 5px 45px rgba(0,0, 0, 0.1);
+    text-decoration: none;
+    font-size: 10px;
+    z-index: 2;
+    filter: blur(0px);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2em 1em;
+    
+    
+}
+.cabecalho__nome{
+    
+    color: rgba(255,255,255,0.5);
+    z-index: 3; 
+}
+.cabecalho__nome:hover{
+    
+    color: #5055eb;
+    
+}
+
+@media screen and (max-width: 391px) {
+
+    .cabecalho__nome{
+        font-size: 1em;
+    }
+
+
+    .containerGlass__lista__item:nth-last-child(4), .containerGlass__lista__item:nth-last-child(5) {
+        display: none;
+    }
+
+       .containerGlass__lista__item__link{
+        
+       margin: 0 0.5em;
+    }
+    
+
+    .containerGlass__lista .containerGlass__lista__item .containerGlass__lista__item__link{
+        transition-delay: 0s, 0.5s, 0.5s;
+        top: -50px;
+        transform: translateY(50px);
+        z-index: 11;
+    
+    }
+    
+    .containerGlass__lista .containerGlass__lista__item .containerGlass__lista__item__link:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 100%;
+        background: var(--brilho);
+        transform: skewX(45deg) translateX(150px);
+        transition: 0.5s;
+    
+    }
+    
+}
