@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/ac1f95fcf3.js"></script>
+    <title>Meu Portifólio</title>
+</head>
+<body class="corpoDaPagina">
+    
+        <main class="meusBotoesDeContato">
+
+            <header class="cabecalho">
+                <h1 class="cabecalho__nome">JavaScript Calculo de IMC</h1>
+                <h1 class="cabecalho__nome">Dyegho Moraes Costa Gama Cunha</h1>
+                
+
+            </header>
+
+            <section class="javaScript">
+                <script>
+
+                    var altura ;
+                    var peso ;
+
+                    var alturaEu = 2;
+                    var alturaLu =1.67;
+                    // var alturaPrompt = prompt("Qual sua Altura")
+                    // var pesoPrompt = prompt("Qual seu Peso");
+                    // var imcPrompt = calculaImc(pesoPrompt,alturaPrompt)
+                    // var imcPprompt = obesidade(imcPrompt);
+                    // mostra("O seu IMC é " + Math.round(imcPrompt)+ " e está com " + imcPprompt+".<br>");
+
+                    var pesoEu = 95;
+                    var pesoLu = 67;
+                    
+                    var imcEu = calculaImc(pesoEu,alturaEu);
+                    var imcLu = calculaImc(pesoLu,alturaLu);
+
+                    var imcPeu = obesidade(imcEu);
+                    var imcPlu = obesidade(imcLu);
+
+                    mostra("Meu IMC é " + Math.round(imcEu) + " e está com " + imcPeu +".<br>");
+                    
+                    mostra("IMC da Lulu é " + Math.round(imcLu)+ " e está com " + imcPlu+".<br>");
+                    
+                    mostra("---------------------------------------------------------------");
+
+                    
+
+                    function mostra(escrito){
+
+                        document.write(escrito)
+                        document.write("<br>")
+                    }
+
+                    function calculaImc(peso,altura){
+                        return  imc = peso / (altura*altura);
+                        // return imc;
+                    }                   
+
+                    function obesidade(imct){
+                        
+                       
+                        if(imct < 20)
+                        {
+                            return ("Você esta abaixo do peso!");
+                        } 
+                        else if(imct >20 && imct <= 25)
+                        {
+                            return ("Peso Ideal");
+                        }
+                        else if(imct >25 && imct <= 30)
+                        {
+                            return("Sobrepeso");
+                        }
+                        else if(imct >30 && imct <= 35)
+                        {
+                             return("Obesidade Moderada");
+                        }
+                        else if(imct >35 && imct <= 40)
+                        {
+                             return("Obesidade Severa");
+                        }
+                        else if(imct >40 && imct <= 50)
+                        {
+                             return("Obesidade Morbida");
+                        }
+                        else
+                        {
+                             return('Gordo');
+                        }
+    	
+                        
+
+                                            
+                    }
+
+                </script>
+
+            </section>
+                    
+            <section class="containerGlass">
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                
+                <!-- <video autoplay loop poster="./fundo.png" class="fundo">
+                <source src="./teste.mp4" type="video/mp4"> -->
+                </video>
+                <ul class="containerGlass__lista">
+                    <li class="containerGlass__lista__item"><a class="containerGlass__lista__item__link" href="https://www.facebook.com/dyegho.cunha"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li class="containerGlass__lista__item"><a class="containerGlass__lista__item__link" href="https://www.instagram.com/dyeghocunha/"><i class="fa fa-instagram" aria-hidden="true"></i></i></a></li>
+                    <li class="containerGlass__lista__item"><a class="containerGlass__lista__item__link" href="https://github.com/DyeghoCunha"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                    <li class="containerGlass__lista__item"><a class="containerGlass__lista__item__link" href="https://www.linkedin.com/in/dyegho-cunha-aa4933b5/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li class="containerGlass__lista__item"><a class="containerGlass__lista__item__link" href="https://wa.me/554799110554"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                    
+
+                </ul>
+            </section>
+            
+        </main>
+        <script src="./java.js"></script>
+</body>
+</html>
