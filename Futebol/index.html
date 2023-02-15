@@ -13,7 +13,7 @@
         <main class="meusBotoesDeContato">
 
             <header class="cabecalho">
-                <h1 class="cabecalho__nome">JavaScript Calculo de IMC</h1>
+                <h1 class="cabecalho__nome">JavaScript Calculo Pontos de Futebol</h1>
                 <h1 class="cabecalho__nome">Dyegho Moraes Costa Gama Cunha</h1>
                 
 
@@ -22,9 +22,45 @@
             <section class="javaScript">
                 <script>
 
+                    function pulaLinha(){
+                        document.write("<br>");
+                        document.write("<br>");
+                    }
+                    function mostra(frase){
+                        document.write(frase);
+                        pulaLinha();
+                    }
+                // parseInt converte Texto em Número
+                    var vitorias = parseInt( prompt("Entre com o número de vitórias"));
+                    var empates = parseInt ( prompt("Entre com o número de empates"));
 
+                    var pontos = vitorias * 3 + empates;
+
+                    var pontosAnoPassado = 10;
+                    var pontosA = calculaPontos(pontos,pontosAnoPassado);
+
+                    mostra("Os pontos do seu time é "+ pontos);
+                    mostra(pontosA)
+                    
+
+                    function calculaPontos(x,y){
+                        if(x > y){
+                        return("Seu time está melhor do que o ano passado");
+                        }
+
+                        if(x == y){
+                            return("Seu time esta igual ao ano passado");
+                        }
+
+                        if(x < y){
+                            return("Seu time está pior do que o ano passado");
+                        } 
+                    }
+
+                
+                
+                
                 </script>
-
             </section>
                     
             <section class="containerGlass">
