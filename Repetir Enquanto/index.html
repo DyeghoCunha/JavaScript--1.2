@@ -20,7 +20,8 @@
             </header>
 
             <section class="javaScript">
-                <div class="aliquota">
+                
+                <!-- <div class="aliquota">
 
                             <input id ="mes1" type="text" placeholder= "1° Mês">
                             <input id="mes2" type="text" placeholder= "2° Mês">
@@ -43,10 +44,48 @@
                         <input id="faturamento" type="text" placeholder= "Faturamento">
 
                         <button id="simplesNacional">Simples Nacional</button>
-                </div>  
-                <script>
-                       
-                        var mes1  = document.querySelector("input#mes1");
+                </div> --> 
+                
+                    <input type="text">
+                    <button>Compare o meu segredo</button>
+                <script>    
+
+                // var segredo = Math.round(Math.random() * 10);
+
+                var segredos = [5, 7, 10, 2, 3];
+                
+
+                var input = document.querySelector("input");
+                input.focus();
+
+                
+                    
+                function verifica(){
+
+                    var achou = false;
+                    for( i = 0 ; i < segredos.length ; i++){
+                    if (input.value== segredos[i]){
+                        alert("Você Acertou!!")
+                        achou=true
+                        break;
+                    } 
+                }
+                    if(achou == false){
+                        alert("Você errou!");
+                    }
+
+                    input.value = "";
+                    input.focus();
+                }
+               
+               
+                var button = document.querySelector("button");
+                                button.onclick = verifica;
+
+
+
+//---------------------------------------------------------------------------------------------------------
+                       /*  var mes1  = document.querySelector("input#mes1");
                         var mes2  = document.querySelector("input#mes2");
                         var mes3  = document.querySelector("input#mes3");
                         var mes4  = document.querySelector("input#mes4");
@@ -98,26 +137,24 @@
                             
 
 
-                            // function aliquota(){
+                            function aliquota(){
 
-                            //     if(soma <= 180000){
-                            //         mostra("Sua Aliquota é 4%");                          
-                            //     } 
-                            //     else if ( soma > 180000 && soma < 360000){
-                            //     var faixa = ((soma*alq)- redutor)/soma;
-                            //         mostra("Sua Aliquota é " + faixa);
-                            //     }
-                            // }
+                                if(soma <= 180000){
+                                    mostra("Sua Aliquota é 4%");                          
+                                } 
+                                else if ( soma > 180000 && soma < 360000){
+                                var faixa = ((soma*alq)- redutor)/soma;
+                                    mostra("Sua Aliquota é " + faixa);
+                                }
+                            }
                             
-                            // function calculaAliquota(){  
+                            function calculaAliquota(){  
                                 
                             
-                            //  }
+                             }
+ */
 
-
-
-
-
+//-----------------------------------------------------------------------------------
                         /* function verifica(){
                             if( input.value == segredo){
                                 alert("Você ACERTOU");
