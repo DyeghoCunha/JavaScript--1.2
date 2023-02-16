@@ -48,9 +48,8 @@
                 
                     <input type="text">
                     <button>Compare o meu segredo</button>
-                <script>    
-
-                // var segredo = Math.round(Math.random() * 10);
+               
+               <script>    
 
                 var segredos = sorteiaNumeros(5);
                 console.log(segredos)
@@ -67,7 +66,7 @@
                             var achou = false;
 
                             for (posicao = 0; posicao < segredos.length; posicao++){
-                                
+
                                 if(segredos[posicao] == numeroAleatorio){
                                     achou = true;
                                     break;
@@ -96,16 +95,17 @@
                 function verifica(){
 
                     var achou = false;
-                    for( i = 0 ; i < segredos.length ; i++){
-                    if (input.value== segredos[i]){
-                        alert("Você Acertou!!")
-                        achou=true
-                        break;
-                    } 
-                }
-                    if(achou == false){
-                        alert("Você errou!");
-                    }
+                        for( i = 0 ; i < segredos.length ; i++){
+                            if (input.value== segredos[i]){
+                                alert("Você Acertou!!")
+                                achou=true
+                                break;
+                            } 
+                        }
+
+                        if(achou == false){
+                            alert("Você errou!");
+                        }
 
                     input.value = "";
                     input.focus();
