@@ -13,52 +13,151 @@
         <main class="meusBotoesDeContato">
 
             <header class="cabecalho">
-                <h1 class="cabecalho__nome">JavaScript Calculo Pontos de Futebol</h1>
+                <h1 class="cabecalho__nome">JavaScript Em que Anos teve Copa</h1>
                 <h1 class="cabecalho__nome">Dyegho Moraes Costa Gama Cunha</h1>
                 
 
             </header>
 
             <section class="javaScript">
-                <script>
+                <div class="aliquota">
+                            <input id ="mes1" type="text" placeholder= "1° Mês">
+                            <input id="mes2" type="text" placeholder= "2° Mês">
+                            <input id="mes3" type="text" placeholder= "3° Mês">
+                            <input id="mes4" type="text" placeholder= "4° Mês">
+                            <input id="mes5" type="text" placeholder= "5° Mês">
+                            <input id="mes6" type="text" placeholder= "6° Mês">
+                            <input id="mes7" type="text" placeholder= "7° Mês">
+                            <input id="mes8" type="text" placeholder= "8° Mês">
+                            <input id="mes9" type="text" placeholder= "9° Mês">
+                            <input id="mes10" type="text" placeholder= "10° Mês">
+                            <input id="mes11" type="text" placeholder= "11° Mês">
+                            <input id="mes12" type="text" placeholder= "12° Mês">
 
-                    function pulaLinha(){
+                            <button id="aliquota">Calcular Alíquita</button>
+                 </div>
+
+                 <div class="simplesNacional">
+
+                        <input id="faturamento" type="text" placeholder= "Faturamento">
+
+                        <button id="simplesNacional">Simples Nacional</button>
+                </div>  
+                <script>
+                        var mes1  = document.querySelector("input#mes1");
+                        var mes2  = document.querySelector("input#mes2");
+                        var mes3  = document.querySelector("input#mes3");
+                        var mes4  = document.querySelector("input#mes4");
+                        var mes5  = document.querySelector("input#mes5");
+                        var mes6  = document.querySelector("input#mes6");
+                        var mes7  = document.querySelector("input#mes7");
+                        var mes8  = document.querySelector("input#mes8");
+                        var mes9  = document.querySelector("input#mes9");
+                        var mes10 = document.querySelector("input#mes10");
+                        var mes11 = document.querySelector("input#mes11");
+                        var mes12 = document.querySelector("input#mes12");
+
+                                   var mesA = parseInt( mes1.value);  
+                                   var mesB = parseInt( mes2.value); 
+                                   var mesC = parseInt( mes3.value); 
+                                   var mesD = parseInt( mes4.value); 
+                                   var mesE = parseInt( mes5.value); 
+                                   var mesF = parseInt( mes6.value); 
+                                   var mesG = parseInt( mes7.value); 
+                                   var mesH = parseInt( mes8.value); 
+                                   var mesI = parseInt( mes9.value); 
+                                   var mesJ = parseInt( mes10.value); 
+                                   var mesK = parseInt( mes11.value); 
+                                   var mesL = parseInt( mes12.value); 
+                        
+                                var bc12 = somatoria();
+
+
+                            function somatoria(){
+                                var soma = (mesA+mesB+mesC+mesD+mesE+mesF+mesG+mesH+mesI+mesJ+mesK+mesL)
+                                    return soma;
+                            }
+
+                            function aliquota(){
+
+                                if(soma < 180000){
+                                    
+                                }
+                            }
+                            
+                            function calculaAliquota(){  
+                                
+                            
+                             }
+
+                        var button = document.querySelector("button#aliquota");
+                            button.onclick = calculaAliquota;
+
+
+
+
+                        /* function verifica(){
+                            if( input.value == segredo){
+                                alert("Você ACERTOU");
+                                }
+
+                                else {
+                                    alert("Você ERROU");
+                                }
+                            }
+
+                             var button = document.querySelector("button.teste");
+                                button.onclick = verifica; */
+
+
+
+//-------------------------------------------------------------------------------
+
+                 /*    function pulaLinha(){
                         document.write("<br>");
-                        document.write("<br>");
+                        // document.write("<br>");
                     }
                     function mostra(frase){
                         document.write(frase);
                         pulaLinha();
-                    }
-                // parseInt converte Texto em Número
-                    var vitorias = parseInt( prompt("Entre com o número de vitórias"));
-                    var empates = parseInt ( prompt("Entre com o número de empates"));
+                    } */
 
-                    var pontos = vitorias * 3 + empates;
+/* ----------------------------------------------------------------------------------
+                    for( linha = 1 ; linha <=3; linha++){
 
-                    var pontosAnoPassado = 10;
-                    var pontosA = calculaPontos(pontos,pontosAnoPassado);
-
-                    mostra("Os pontos do seu time é "+ pontos);
-                    mostra(pontosA)
-                    
-
-                    function calculaPontos(x,y){
-                        if(x > y){
-                        return("Seu time está melhor do que o ano passado");
+                        document.write("*");
+                        for(coluna = 2; coluna <= 3; coluna++){
+                            document.write("*");
+                            
                         }
+                        pulaLinha();
+                    } */
 
-                        if(x == y){
-                            return("Seu time esta igual ao ano passado");
-                        }
+ //---------------------------------------------------------------------------------------
+                 /*    var totalFamiliares = parseInt(prompt("Quantidade de familiares?"));
 
-                        if(x < y){
-                            return("Seu time está pior do que o ano passado");
-                        } 
+                    var numero = 1;
+                    var totalIdades= 0;
+
+                    while (numero <= totalFamiliares){
+                        var idade = parseInt(prompt("Informe idade do familiar"));
+                        totalIdades = totalIdades + idade;
+                        mostra("A idade do familiar é "+ idade);
+                        numero++;
                     }
 
-                
-                
+                    var mediaDasIdades = totalIdades / totalFamiliares;
+                    mostra("A média das ideades dos familiáres é " + mediaDasIdades); */
+
+    //----------------------------------------------------------------------------
+
+                    /* var contador = 1
+                   
+                   for ( contador = 1; contador <= 10 ; contador ++){
+                    mostra(contador * 7);
+                   }
+                   mostra("Fim"); */
+
                 
                 </script>
             </section>
