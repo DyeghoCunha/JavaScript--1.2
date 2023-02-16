@@ -13,7 +13,7 @@
         <main class="meusBotoesDeContato">
 
             <header class="cabecalho">
-                <h1 class="cabecalho__nome">JavaScript Em que Anos teve Copa</h1>
+                <h1 class="cabecalho__nome">JavaScript Teste Simples Nacional</h1>
                 <h1 class="cabecalho__nome">Dyegho Moraes Costa Gama Cunha</h1>
                 
 
@@ -21,6 +21,7 @@
 
             <section class="javaScript">
                 <div class="aliquota">
+
                             <input id ="mes1" type="text" placeholder= "1° Mês">
                             <input id="mes2" type="text" placeholder= "2° Mês">
                             <input id="mes3" type="text" placeholder= "3° Mês">
@@ -44,6 +45,7 @@
                         <button id="simplesNacional">Simples Nacional</button>
                 </div>  
                 <script>
+                       
                         var mes1  = document.querySelector("input#mes1");
                         var mes2  = document.querySelector("input#mes2");
                         var mes3  = document.querySelector("input#mes3");
@@ -70,28 +72,48 @@
                                    var mesK = parseInt( mes11.value); 
                                    var mesL = parseInt( mes12.value); 
                         
-                                var bc12 = somatoria();
+                                    var bc12 = somatoria();
+                                   
+                                  
+                                   
 
 
                             function somatoria(){
-                                var soma = (mesA+mesB+mesC+mesD+mesE+mesF+mesG+mesH+mesI+mesJ+mesK+mesL)
-                                    return soma;
-                            }
-
-                            function aliquota(){
-
-                                if(soma < 180000){
+                                var soma = (mesA+mesB+mesC+mesD+mesE+mesF+mesG+mesH+mesI+mesJ+mesK+mesL);
                                     
-                                }
+                                    return soma;
+                                    
                             }
                             
-                            function calculaAliquota(){  
+                            function alerta(){
+                                var teste = bc12
+
+                                alert("teste " + teste )
+                            }
+                                
+                               
+                            var button = document.querySelector("button#aliquota");
+                                button.onclick = alerta;
                                 
                             
-                             }
 
-                        var button = document.querySelector("button#aliquota");
-                            button.onclick = calculaAliquota;
+
+                            // function aliquota(){
+
+                            //     if(soma <= 180000){
+                            //         mostra("Sua Aliquota é 4%");                          
+                            //     } 
+                            //     else if ( soma > 180000 && soma < 360000){
+                            //     var faixa = ((soma*alq)- redutor)/soma;
+                            //         mostra("Sua Aliquota é " + faixa);
+                            //     }
+                            // }
+                            
+                            // function calculaAliquota(){  
+                                
+                            
+                            //  }
+
 
 
 
