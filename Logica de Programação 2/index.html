@@ -19,31 +19,60 @@
 
             <section class="javaScript">
                 
-             <canvas class="canvas" width = "100%" height="100%"></canvas>           
+                <canvas class="canvas" width = "" height=""></canvas>           
                
-               <script>    
-                    
+                 <script>    
+
                     var tela = document.querySelector('canvas');
                     var pincel = tela.getContext('2d');
 
-
-                    function desenhaQuadrado(x,y,cor){
-                    pincel.fillStyle = cor;
-                    pincel.fillRect(x,y, 10,10);
-                    pincel.fillStroke = 'black';
-                    pincel.strokeRect(x,y,10,10);
-
-                    }
-
                     
-                    
-                    for(x = 0; x < 100; x = x + 10){
+                        function desenhaCirculo(x, y, raio){
 
-                    desenhaQuadrado(x,0, 'green');
+                            pincel.fillStyle = 'blue';
+                            pincel.beginPath();
+                            pincel.arc(x, y, raio, 0, 2* Math.PI);
+                            pincel.fill();
+                            
+                        }
+
+                        function limpaTela(){
+                            pincel.clearRect(0,0,600,400);
+                        }
+
+                       /*  for(i=11; i<290; i++){
+                            limpaTela();
+                            desenhaCirculo(i,50,10)
+                            
+                        } */
+
+                        var x = 11;
+                        var y = 100
+                        function atualizaTela(){
+
+
+                            
+                                if(x <= 290){
+                                 limpaTela();
+                                 desenhaCirculo(x, y, 10)
+                                 x++;
+                                 y = y-0.2
+                            }
+
+                          
+                        
+                            }
+                        
+
+                         setInterval(atualizaTela,20)
+
+
+
+                       //desenhaCirculo(11 , 50 , 10)
+                        
+                   
                     
-                    }
-                    
-                </script>
+                 </script>
 
             </section>
                     
