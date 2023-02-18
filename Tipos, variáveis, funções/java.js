@@ -45,4 +45,4 @@ console.log(citacao)
 
 //template string ou template literal
 
- 
+ console.log(teste)
