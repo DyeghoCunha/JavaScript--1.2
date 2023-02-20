@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/ac1f95fcf3.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title></title>
+</head>
+
+
+<body class="corpo">
+
+    <header class="cabecalho">
+        <h1>Teste de Interação Html e Javascript</h1>
+    </header>
+
+    <section class="container">
+
+        <table class="container__tabela">
+
+            <thead class=" tabela__cabecalho">
+                <th>Empresa</th>
+                <th>Btg12</th>
+                <th>Faturamento</th>
+                <th>Aliquota</th>
+            </thead>
+            <tbody id="tabela__empresas">
+
+                <tr class="tabela__coluna">
+                    <td class="tabela__coluna__linha tdEmpresa">Eficaz</td>
+                    <td class="tabela__coluna__linha tdBtg12">178000,00</td>
+                    <td class="tabela__coluna__linha tdFaturamento">45000</td>
+                    <td class="tabela__coluna__linha tdAliquota">8%</td>
+                </tr>
+
+                <tr class="tabela__coluna">
+                    <td class="tabela__coluna__linha tdEmpresa">Barouki</td>
+                    <td class="tabela__coluna__linha tdBtg12">568000,00</td>
+                    <td class="tabela__coluna__linha tdFaturamento">85000</td>
+                    <td class="tabela__coluna__linha tdAliquota">10%</td>
+                </tr>
+
+                <tr class="tabela__coluna">
+                    <td class="tabela__coluna__linha tdEmpresa">Rafa</td>
+                    <td class="tabela__coluna__linha tdBtg12">978000,00</td>
+                    <td class="tabela__coluna__linha tdFaturamento">125000</td>
+                    <td class="tabela__coluna__linha tdAliquota">15%</td>
+                </tr>
+
+            </tbody>
+          
+        </table>
+
+        <form action="" id="formulario" class="container__form">
+
+            <div class="form">
+                <label for="empresa">Empresa</label>
+                <input type="text" name="empresa" id="empresa" placeholder="Digite o nome de sua Empresa">
+            </div>
+            
+            <div class="form">
+                <label for="btg12">Btg12</label>
+                <input type="text" name="btg12" id="btg12" placeholder="Digite o Faturamento acumulado dos 12 meses">
+            </div>
+
+            <div class="form">
+                <label for="Faturamento">Faturamento</label>
+                <input type="text" name="faturamento" id="faturamento" placeholder="Digite o Faturamento do mês">
+            </div>
+            <button class="botao" id="botaoCalcula">Calcula</button>
+
+        </form>
+
+
+
+    </section>
+
+
+
+
+
+
+
+    <script src="./formulario.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script>
+        VanillaTilt.init(document.querySelector(".container__glass__caixa"), {
+		max: 15,
+		speed: 400,
+        glare:true,
+	});
+    </script> 
+</body>
+</html>

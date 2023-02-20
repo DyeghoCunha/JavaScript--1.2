@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #644651;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    
+   
+
+   --border: 1px solid rgba(255, 255, 255, 0.5);
+   --bordertop: 1px solid rgba(255,255,255,0.75);
+   --borderleft:1px solid rgba(255,255,255,0.75);
+   --fundoVidro: rgba(255,255,255,0.1);
+   --boxshadow: 0 25px 45px rgba(0,0,0,0.05);
+   
+   
+   --color: #644651;
+   --blur: 10px;
+   --borderRad: 10px;
+
+
+   
+
+}
+
+.corpo{
+    background-color: antiquewhite;
+}
+
+.cabecalho{
+    font-size: 0.8em;
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container__tabela{
+
+    margin: 2em;
+    border: 1px solid #644651;
+    width: 90%;
+    max-width: 900px;
+    padding: 1em;
+    background-color: bisque;
+    
+}
+
+.tabela__cabecalho{
+    background-color: rgb(233, 148, 20);
+}
+
+.tabela__coluna{
+    text-align: center;
+}
+
+td{
+    text-align: center;
+
+}
+
+td::first-letter{
+    text-transform: uppercase;
+}
+
+.container__form{
+   
+    
+    border: 1px solid #644651;
+    padding: 1em;
+    background-color: bisque;
+    width: 90%;
+    max-width: 600px;
+}
+
+.form{
+    margin: 0.5em;
+    display: flex;
+    flex-direction: column;
+    background-color: ;
+}
+
+input{
+    background-color: rgb(231, 215, 171);
+}
+.botao{
+    padding: 0 1em;
+    margin-left: 36%;
+    background-color: rgb(237, 199, 141);
+    box-shadow: #644651 4px 4px 3px;
+    transition: 0.5s;
+    
+}
+.botao:hover{
+    background-color: #644651;
+    color: aliceblue;   
+    font-weight: 300;
+    box-shadow: #fc5e03 0px 0px 10px 2px;
+    transition: .5s;
+}
