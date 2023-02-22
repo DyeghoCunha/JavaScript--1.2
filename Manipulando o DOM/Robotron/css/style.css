@@ -30,11 +30,11 @@ main {
 }
 
 .robotron {
-    /* background: url(../img/estrutura.png) no-repeat;
+    background: url(../img/estrutura.png) no-repeat;
     background-position: center center;
     margin: 0;
     flex-basis: 40%;
-    position: relative; */
+    position: relative;
 }
 
 .robo {
