@@ -1,7 +1,7 @@
 
 var empresa = document.querySelector(".tdEmpresa")
 
-empresa.textContent = "Bunda"
+// empresa.textContent = "Bunda"
 
 
 /*--------------------------------------- Incluir Itens ao Clique------------*/
